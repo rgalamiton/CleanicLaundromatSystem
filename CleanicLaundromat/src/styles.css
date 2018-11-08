@@ -1,0 +1,20 @@
+.button {
+    background-color: rgb(192, 192, 192);
+   
+    padding: 10px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    margin:10px
+}
+
+.medium-btn {
+    width: 200px;
+    height: 150px;
+}
+
+p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 40px;
+    font-weight: bold;
+}

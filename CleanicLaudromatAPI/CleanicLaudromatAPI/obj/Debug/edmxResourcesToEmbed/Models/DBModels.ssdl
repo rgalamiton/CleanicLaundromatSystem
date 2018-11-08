@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CleanicLaundromatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="InventoryList">
+    <Key>
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="itemID" Type="int" Nullable="false" />
+    <Property Name="itemName" Type="varchar" MaxLength="50" />
+    <Property Name="category" Type="varchar" MaxLength="50" />
+    <Property Name="sellingPrice" Type="int" />
+    <Property Name="price" Type="int" />
+    <Property Name="profit" Type="int" />
+    <Property Name="sourceStore" Type="varchar" MaxLength="50" />
+    <Property Name="markUp" Type="int" />
+    <Property Name="inventoryType" Type="varchar" MaxLength="50" />
+    <Property Name="hasQty" Type="varchar" MaxLength="50" />
+    <Property Name="quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="Self_service">
+    <Key>
+      <PropertyRef Name="transID" />
+    </Key>
+    <Property Name="transID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="contact" Type="varchar" MaxLength="50" />
+    <Property Name="cardNum" Type="int" />
+    <Property Name="beginningBal" Type="int" />
+    <Property Name="endingBal" Type="int" />
+    <Property Name="amountUsed" Type="int" />
+    <Property Name="sukiCardNum" Type="int" />
+    <Property Name="hasPromo" Type="varchar" MaxLength="50" />
+    <Property Name="enlistedItems" Type="varchar" MaxLength="50" />
+    <Property Name="itemsTotal" Type="int" />
+    <Property Name="transDate" Type="varchar" MaxLength="50" />
+    <Property Name="totalAmount" Type="int" />
+    <Property Name="remarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="transID" />
+    </Key>
+    <Property Name="transID" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="contact" Type="varchar" MaxLength="50" />
+    <Property Name="controlNum" Type="int" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="userName" Type="varchar" MaxLength="50" />
+    <Property Name="userPassword" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="CleanicLaundromatModelStoreContainer">
+    <EntitySet Name="InventoryList" EntityType="Self.InventoryList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Self_service" EntityType="Self.Self_service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

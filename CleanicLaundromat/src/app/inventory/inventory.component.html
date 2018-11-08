@@ -1,0 +1,38 @@
+
+<div class="container">
+
+  <button  class="btn btn-success" style="float: right;" routerLink="/add-item" routerLinkActive #rla="routerLinkActive"><i class="fas fa-plus-square"></i> Add Item </button>
+  <!-- Sample data -->
+  <table class="highlight ">
+    <thead>
+      <tr>
+          <th>Item Name</th>
+          <th>Quantity</th>
+          <th>Item Price</th>
+          <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Breeze</td>
+        <td>2</td>
+        <td>$0.87</td>
+        <td>$1.64</td>
+      </tr>
+      <tr>
+        <td>Surf</td>
+        <td>1</td>
+        <td>$3.76</td>
+        <td>$3.76</td>
+      </tr>
+      <tr>
+        <td>Tide</td>
+        <td>1</td>
+        <td>$2.00</td>
+        <td>$2.00</td>
+      </tr>
+    </tbody>
+  </table> 
+</div>
+
+<router-outlet> </router-outlet>

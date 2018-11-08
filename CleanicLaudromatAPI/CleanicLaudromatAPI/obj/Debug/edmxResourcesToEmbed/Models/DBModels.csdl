@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CleanicLaundromatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="InventoryList">
+    <Key>
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="itemID" Type="Int32" Nullable="false" />
+    <Property Name="itemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="sellingPrice" Type="Int32" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="profit" Type="Int32" />
+    <Property Name="sourceStore" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="markUp" Type="Int32" />
+    <Property Name="inventoryType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hasQty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="quantity" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Self_service">
+    <Key>
+      <PropertyRef Name="transID" />
+    </Key>
+    <Property Name="transID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="cardNum" Type="Int32" />
+    <Property Name="beginningBal" Type="Int32" />
+    <Property Name="endingBal" Type="Int32" />
+    <Property Name="amountUsed" Type="Int32" />
+    <Property Name="sukiCardNum" Type="Int32" />
+    <Property Name="hasPromo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="enlistedItems" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="itemsTotal" Type="Int32" />
+    <Property Name="transDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="totalAmount" Type="Int32" />
+    <Property Name="remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="transID" />
+    </Key>
+    <Property Name="transID" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="controlNum" Type="Int32" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="Int32" Nullable="false" />
+    <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="userPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="DBModel" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="InventoryLists" EntityType="Self.InventoryList" />
+    <EntitySet Name="Self_service" EntityType="Self.Self_service" />
+    <EntitySet Name="Tables" EntityType="Self.Table" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+  </EntityContainer>
+</Schema>

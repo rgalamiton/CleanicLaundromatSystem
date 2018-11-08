@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CleanicLaundromatModelStoreContainer" CdmEntityContainer="DBModel">
+    <EntitySetMapping Name="InventoryLists">
+      <EntityTypeMapping TypeName="CleanicLaundromatModel.InventoryList">
+        <MappingFragment StoreEntitySet="InventoryList">
+          <ScalarProperty Name="itemID" ColumnName="itemID" />
+          <ScalarProperty Name="itemName" ColumnName="itemName" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="sellingPrice" ColumnName="sellingPrice" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="profit" ColumnName="profit" />
+          <ScalarProperty Name="sourceStore" ColumnName="sourceStore" />
+          <ScalarProperty Name="markUp" ColumnName="markUp" />
+          <ScalarProperty Name="inventoryType" ColumnName="inventoryType" />
+          <ScalarProperty Name="hasQty" ColumnName="hasQty" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Self_service">
+      <EntityTypeMapping TypeName="CleanicLaundromatModel.Self_service">
+        <MappingFragment StoreEntitySet="Self_service">
+          <ScalarProperty Name="transID" ColumnName="transID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="cardNum" ColumnName="cardNum" />
+          <ScalarProperty Name="beginningBal" ColumnName="beginningBal" />
+          <ScalarProperty Name="endingBal" ColumnName="endingBal" />
+          <ScalarProperty Name="amountUsed" ColumnName="amountUsed" />
+          <ScalarProperty Name="sukiCardNum" ColumnName="sukiCardNum" />
+          <ScalarProperty Name="hasPromo" ColumnName="hasPromo" />
+          <ScalarProperty Name="enlistedItems" ColumnName="enlistedItems" />
+          <ScalarProperty Name="itemsTotal" ColumnName="itemsTotal" />
+          <ScalarProperty Name="transDate" ColumnName="transDate" />
+          <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tables">
+      <EntityTypeMapping TypeName="CleanicLaundromatModel.Table">
+        <MappingFragment StoreEntitySet="Table">
+          <ScalarProperty Name="transID" ColumnName="transID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="controlNum" ColumnName="controlNum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="CleanicLaundromatModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="userPassword" ColumnName="userPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

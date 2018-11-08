@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CleanicLaundromatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="InventoryList">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="int" Nullable="false" />
+          <Property Name="itemName" Type="varchar" MaxLength="50" />
+          <Property Name="category" Type="varchar" MaxLength="50" />
+          <Property Name="sellingPrice" Type="int" />
+          <Property Name="price" Type="int" />
+          <Property Name="profit" Type="int" />
+          <Property Name="sourceStore" Type="varchar" MaxLength="50" />
+          <Property Name="markUp" Type="int" />
+          <Property Name="inventoryType" Type="varchar" MaxLength="50" />
+          <Property Name="hasQty" Type="varchar" MaxLength="50" />
+          <Property Name="quantity" Type="int" />
+        </EntityType>
+        <EntityType Name="Self_service">
+          <Key>
+            <PropertyRef Name="transID" />
+          </Key>
+          <Property Name="transID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="contact" Type="varchar" MaxLength="50" />
+          <Property Name="cardNum" Type="int" />
+          <Property Name="beginningBal" Type="int" />
+          <Property Name="endingBal" Type="int" />
+          <Property Name="amountUsed" Type="int" />
+          <Property Name="sukiCardNum" Type="int" />
+          <Property Name="hasPromo" Type="varchar" MaxLength="50" />
+          <Property Name="enlistedItems" Type="varchar" MaxLength="50" />
+          <Property Name="itemsTotal" Type="int" />
+          <Property Name="transDate" Type="varchar" MaxLength="50" />
+          <Property Name="totalAmount" Type="int" />
+          <Property Name="remarks" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="transID" />
+          </Key>
+          <Property Name="transID" Type="int" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="contact" Type="varchar" MaxLength="50" />
+          <Property Name="controlNum" Type="int" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="int" Nullable="false" />
+          <Property Name="userName" Type="varchar" MaxLength="50" />
+          <Property Name="userPassword" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="CleanicLaundromatModelStoreContainer">
+          <EntitySet Name="InventoryList" EntityType="Self.InventoryList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Self_service" EntityType="Self.Self_service" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CleanicLaundromatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="InventoryList">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemID" Type="Int32" Nullable="false" />
+          <Property Name="itemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="sellingPrice" Type="Int32" />
+          <Property Name="price" Type="Int32" />
+          <Property Name="profit" Type="Int32" />
+          <Property Name="sourceStore" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="markUp" Type="Int32" />
+          <Property Name="inventoryType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="hasQty" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="quantity" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Self_service">
+          <Key>
+            <PropertyRef Name="transID" />
+          </Key>
+          <Property Name="transID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="cardNum" Type="Int32" />
+          <Property Name="beginningBal" Type="Int32" />
+          <Property Name="endingBal" Type="Int32" />
+          <Property Name="amountUsed" Type="Int32" />
+          <Property Name="sukiCardNum" Type="Int32" />
+          <Property Name="hasPromo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="enlistedItems" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="itemsTotal" Type="Int32" />
+          <Property Name="transDate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="totalAmount" Type="Int32" />
+          <Property Name="remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Table">
+          <Key>
+            <PropertyRef Name="transID" />
+          </Key>
+          <Property Name="transID" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="controlNum" Type="Int32" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="userID" />
+          </Key>
+          <Property Name="userID" Type="Int32" Nullable="false" />
+          <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="userPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="DBModel" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="InventoryLists" EntityType="Self.InventoryList" />
+          <EntitySet Name="Self_service" EntityType="Self.Self_service" />
+          <EntitySet Name="Tables" EntityType="Self.Table" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CleanicLaundromatModelStoreContainer" CdmEntityContainer="DBModel">
+          <EntitySetMapping Name="InventoryLists">
+            <EntityTypeMapping TypeName="CleanicLaundromatModel.InventoryList">
+              <MappingFragment StoreEntitySet="InventoryList">
+                <ScalarProperty Name="itemID" ColumnName="itemID" />
+                <ScalarProperty Name="itemName" ColumnName="itemName" />
+                <ScalarProperty Name="category" ColumnName="category" />
+                <ScalarProperty Name="sellingPrice" ColumnName="sellingPrice" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="profit" ColumnName="profit" />
+                <ScalarProperty Name="sourceStore" ColumnName="sourceStore" />
+                <ScalarProperty Name="markUp" ColumnName="markUp" />
+                <ScalarProperty Name="inventoryType" ColumnName="inventoryType" />
+                <ScalarProperty Name="hasQty" ColumnName="hasQty" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Self_service">
+            <EntityTypeMapping TypeName="CleanicLaundromatModel.Self_service">
+              <MappingFragment StoreEntitySet="Self_service">
+                <ScalarProperty Name="transID" ColumnName="transID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="contact" ColumnName="contact" />
+                <ScalarProperty Name="cardNum" ColumnName="cardNum" />
+                <ScalarProperty Name="beginningBal" ColumnName="beginningBal" />
+                <ScalarProperty Name="endingBal" ColumnName="endingBal" />
+                <ScalarProperty Name="amountUsed" ColumnName="amountUsed" />
+                <ScalarProperty Name="sukiCardNum" ColumnName="sukiCardNum" />
+                <ScalarProperty Name="hasPromo" ColumnName="hasPromo" />
+                <ScalarProperty Name="enlistedItems" ColumnName="enlistedItems" />
+                <ScalarProperty Name="itemsTotal" ColumnName="itemsTotal" />
+                <ScalarProperty Name="transDate" ColumnName="transDate" />
+                <ScalarProperty Name="totalAmount" ColumnName="totalAmount" />
+                <ScalarProperty Name="remarks" ColumnName="remarks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tables">
+            <EntityTypeMapping TypeName="CleanicLaundromatModel.Table">
+              <MappingFragment StoreEntitySet="Table">
+                <ScalarProperty Name="transID" ColumnName="transID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="contact" ColumnName="contact" />
+                <ScalarProperty Name="controlNum" ColumnName="controlNum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="CleanicLaundromatModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="userName" ColumnName="userName" />
+                <ScalarProperty Name="userPassword" ColumnName="userPassword" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

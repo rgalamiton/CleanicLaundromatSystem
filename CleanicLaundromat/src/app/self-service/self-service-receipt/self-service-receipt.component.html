@@ -1,0 +1,57 @@
+
+<div class="container">
+  <h1>Card #</h1>
+  <form class="col s12" #sample="ngForm" (ngSubmit)="onSubmit(sample)">
+    <input type="hidden" name="id" #id="ngModel" [(ngModel)]="LaundryService.selectedService.id">
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <input class="form-control" name="name" #name="ngModel" [(ngModel)]="LaundryService.selectedService.name" placeholder="Name" >
+      </div>
+      <div class="form-group col-md-6">
+        <input class="form-control" name="contact" #contact="ngModel" [(ngModel)]="LaundryService.selectedService.contact" placeholder="Contact" >
+      </div>
+      <div class="form-group col-md-6">
+        <input class="form-control" name="cardNum" #cardNum="ngModel" [(ngModel)]="LaundryService.selectedService.cardNum" placeholder="Card Number" >
+      </div>  
+      <div class="form-group col-md-6">
+        <input class="form-control" name="beginningBal" #beginningBal="ngModel" [(ngModel)]="LaundryService.selectedService.beginningBal" placeholder="Beginning Balance" >
+      </div>
+      <div class="form-group col-md-6">
+        <input class="form-control" name="endingBal" #endingBal="ngModel" [(ngModel)]="LaundryService.selectedService.endingBal" placeholder="Ending Balance" >
+      </div>
+      <div class="form-group col-md-6">
+        <input class="form-control" name="amountUsed" #amountUsed="ngModel" [(ngModel)]="LaundryService.selectedService.amountUsed" placeholder="Amount Used" >
+      </div>
+      <div class="form-group col-md-6">
+        <input class="form-control" name="sukiCardNum" #sukiCardNum="ngModel" [(ngModel)]="LaundryService.selectedService.sukiCardNum" placeholder="Suki Card Number" >
+      </div>
+      <div class="form-group col-md-6">
+        <input class="form-control" name="hasPromo" #hasPromo="ngModel" [(ngModel)]="LaundryService.selectedService.hasPromo" placeholder="Has Promo?" >
+      </div>
+      <div class="form-group col-md-6">
+        <input class="form-control" name="enlistedItems" #enlistedItems="ngModel" [(ngModel)]="LaundryService.selectedService.enlistedItems" placeholder="Enlisted Items" >
+      </div>
+      <div class="form-group col-md-6">
+        <input class="form-control" name="transDate" #transDate="ngModel" [(ngModel)]="LaundryService.selectedService.transDate" placeholder="Transaction Date" >
+      </div>
+      <div class="form-group col-md-6">
+        <input class="form-control" name="totalAmount" #totalAmount="ngModel" [(ngModel)]="LaundryService.selectedService.totalAmount" placeholder="Total Amount" >
+      </div>
+      <div class="form-group col-md-6">
+        <input class="form-control" name="remarks" #remarks="ngModel" [(ngModel)]="LaundryService.selectedService.remarks" placeholder="Remarks" >
+      </div>   
+    </div>
+  
+    <div class="form-row">
+      <div class="form-group col-md-8">
+        <button type="submit" class="btn btn-lg btn-block btn-info">
+          <i class="fa fa-floppy-o"></i> Submit</button>
+      </div>
+      <div class="form-group col-md-4">
+        <button type="button" class="btn btn-lg btn-block btn-secondary" (click)="resetForm(sample)">
+          <i class="fa fa-repeat"></i> Reset</button>
+      </div>
+    </div>
+  </form>  
+
+</div>

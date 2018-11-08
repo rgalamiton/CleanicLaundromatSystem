@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CleanicLaudromatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="InventoryList">
+    <Key>
+      <PropertyRef Name="itemID" />
+    </Key>
+    <Property Name="itemID" Type="int" Nullable="false" />
+    <Property Name="itemName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="category" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sellingPrice" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="price" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="profit" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="sourceStore" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="markUp" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="inventoryType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="hasQty" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="quantity" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Self-service">
+    <Key>
+      <PropertyRef Name="transID" />
+    </Key>
+    <Property Name="transID" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact" Type="varchar" MaxLength="50" />
+    <Property Name="cardNum" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="beginningBal" Type="int" Nullable="false" />
+    <Property Name="endingBal" Type="int" Nullable="false" />
+    <Property Name="amountUsed" Type="int" Nullable="false" />
+    <Property Name="sukiCardNum" Type="varchar" MaxLength="50" />
+    <Property Name="hasPromo" Type="varchar" MaxLength="50" />
+    <Property Name="enlistedItems" Type="varchar" MaxLength="50" />
+    <Property Name="itemsTotal" Type="int" />
+    <Property Name="transDate" Type="datetime" Nullable="false" />
+    <Property Name="totalAmount" Type="int" Nullable="false" />
+    <Property Name="remarks" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Table">
+    <Key>
+      <PropertyRef Name="transID" />
+    </Key>
+    <Property Name="transID" Type="int" Nullable="false" />
+    <Property Name="name" Type="nchar" MaxLength="10" />
+    <Property Name="contact" Type="nchar" MaxLength="10" />
+    <Property Name="controlNum" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="userName" Type="varchar" MaxLength="50" />
+    <Property Name="userPassword" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="CleanicLaudromatModelStoreContainer">
+    <EntitySet Name="InventoryList" EntityType="Self.InventoryList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Self-service" EntityType="Self.Self-service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table" EntityType="Self.Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
