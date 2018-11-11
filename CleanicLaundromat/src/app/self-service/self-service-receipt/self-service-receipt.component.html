@@ -2,7 +2,7 @@
 <div class="container">
   <h1>Card #</h1>
   <form class="col s12" #sample="ngForm" (ngSubmit)="onSubmit(sample)">
-    <input type="hidden" name="id" #id="ngModel" [(ngModel)]="LaundryService.selectedService.id">
+    <!--<input type="hidden" name="id" #id="ngModel" [(ngModel)]="LaundryService.selectedService.id">-->
     <div class="form-row">
       <div class="form-group col-md-6">
         <input class="form-control" name="name" #name="ngModel" [(ngModel)]="LaundryService.selectedService.name" placeholder="Name" >

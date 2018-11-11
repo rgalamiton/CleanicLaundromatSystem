@@ -8,9 +8,10 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SelfServiceReceiptComponent } from './self-service/self-service-receipt/self-service-receipt.component';
-import { SelfServiceButtonComponent } from './self-service-button/self-service-button.component';
+import { SelfServiceButtonComponent } from './self-service/self-service-button/self-service-button.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { AddItemComponent } from './inventory/add-item/add-item.component';
+import { GetSelfServiceComponent } from './self-service/get-self-service/get-self-service.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AddItemComponent } from './inventory/add-item/add-item.component';
     SelfServiceReceiptComponent,
     SelfServiceButtonComponent,
     InventoryComponent,
-    AddItemComponent
+    AddItemComponent,
+    GetSelfServiceComponent
   ],
   imports: [
     BrowserModule,

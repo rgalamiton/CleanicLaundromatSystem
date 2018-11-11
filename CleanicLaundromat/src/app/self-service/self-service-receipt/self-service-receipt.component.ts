@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { DetailsService } from '../shared/details.service';
 import { ToastrService } from 'ngx-toastr';
 import { NgForm } from '@angular/forms';
-//import { fillProperties } from '@angular/core/src/util/property';
-//import { ValueConverter } from '@angular/compiler/src/render3/view/template';
 import { Details } from '../shared/details.model';
 
 
@@ -30,6 +28,7 @@ export class SelfServiceReceiptComponent implements OnInit {
     .subscribe( data => {
       this.toastr.success('New Transaction Added Successfully!', 'New Transaction');
       this.resetForm(form);
+
     });
   }
 

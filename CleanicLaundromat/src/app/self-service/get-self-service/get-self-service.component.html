@@ -1,0 +1,24 @@
+<table class="highlight">
+    
+  <thead>
+    <tr>
+        <th>Name</th>
+        <th>Contact</th>
+        <th>Card Number</th>
+        <th>Options</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let selfService of selfServiceList"> 
+        <td>{{selfService.name}}</td>
+        <td>{{selfService.contact}}</td>
+        <td>{{selfService.cardNum}}</td>
+        <td>
+          <a class="btn" (click)="onUpdate( selfService )"><i class="fa fa-pencil-square-o"></i></a>&nbsp;
+          <a class="btn text-danger" (click)="onDelete( selfService.transID )"><i class="fa fa-trash-o"></i></a>
+        </td>
+    </tr>
+  </tbody>
+ 
+</table>

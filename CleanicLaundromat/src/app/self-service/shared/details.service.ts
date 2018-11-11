@@ -22,12 +22,24 @@ export class DetailsService {
   
   constructor(private http: HttpClient) { }
   
-  postService (data: Details): Observable<Details> {
+  postService(data: Details): Observable<Details> {
     return this.http.post<Details>(this._url, data, httpOptions);
   }
 
   getSelfService(): Observable<Details[]>{
     return this.http.get<Details[]>(this._url);
   }
+
+  deleteService(id: number): Observable<{}>{
+    const url = this._url + '/' + id;
+    return this.http.delete(url, httpOptions);
+  }
+
+ /* updateService(data: Details): Observable<Details> {
+    const url = this._url + '/' + id;
+    return this.http.put<Details>(this._url, data, httpOptions);
+  }
+
+  */
 
 }
