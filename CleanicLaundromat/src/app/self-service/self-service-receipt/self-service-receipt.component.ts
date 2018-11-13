@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DetailsService } from '../shared/details.service';
 import { ToastrService } from 'ngx-toastr';
 import { NgForm } from '@angular/forms';
-import { Details } from '../shared/details.model';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -12,13 +12,12 @@ import { Details } from '../shared/details.model';
   providers: [DetailsService]
 })
 export class SelfServiceReceiptComponent implements OnInit {
-
-  constructor(private LaundryService: DetailsService, private toastr: ToastrService) { }
+  id: number;
+  constructor(private LaundryService: DetailsService, private toastr: ToastrService, private _ActivatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.resetForm();
-    //this.LaundryService.getSelfService()
-    //.subscribe(data => this.getData = data);
+    this.id = this._ActivatedRoute.snapshot.params['id'];
   }
 
 
