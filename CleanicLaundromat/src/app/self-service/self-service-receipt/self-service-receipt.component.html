@@ -3,43 +3,55 @@
   <h1>Card #</h1>
   <form class="col s12" #sample="ngForm" (ngSubmit)="onSubmit(sample)">
     <!--<input type="hidden" name="id" #id="ngModel" [(ngModel)]="LaundryService.selectedService.id">-->
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <input class="form-control" name="name" #name="ngModel" [(ngModel)]="LaundryService.selectedService.name" placeholder="Name" >
+    <div class="  row">
+      <div class="input-field col s4">
+          <input name="name" #name="ngModel" [(ngModel)]="LaundryService.selectedService.name" type="text" class="validate">
+          <label for="name">Name</label>
       </div>
-      <div class="form-group col-md-6">
-        <input class="form-control" name="contact" #contact="ngModel" [(ngModel)]="LaundryService.selectedService.contact" placeholder="Contact" >
+      <div class="input-field col s4">
+          <input name="contact" #contact="ngModel" [(ngModel)]="LaundryService.selectedService.contact" type="text" class="validate">
+          <label for="contact">Contact</label>
       </div>
-      <div class="form-group col-md-6">
-        <input class="form-control" name="cardNum" #cardNum="ngModel" [(ngModel)]="LaundryService.selectedService.cardNum" placeholder="Card Number" >
-      </div>  
-      <div class="form-group col-md-6">
-        <input class="form-control" name="beginningBal" #beginningBal="ngModel" [(ngModel)]="LaundryService.selectedService.beginningBal" placeholder="Beginning Balance" >
+      <div class="input-field col s4">
+          <input name="cardNum" #cardNum="ngModel" [(ngModel)]="LaundryService.selectedService.cardNum" type="text" class="validate">
+          <label for="cardNum">Card Number</label>
       </div>
-      <div class="form-group col-md-6">
-        <input class="form-control" name="endingBal" #endingBal="ngModel" [(ngModel)]="LaundryService.selectedService.endingBal" placeholder="Ending Balance" >
-      </div>
-      <div class="form-group col-md-6">
-        <input class="form-control" name="amountUsed" #amountUsed="ngModel" [(ngModel)]="LaundryService.selectedService.amountUsed" placeholder="Amount Used" >
-      </div>
-      <div class="form-group col-md-6">
-        <input class="form-control" name="sukiCardNum" #sukiCardNum="ngModel" [(ngModel)]="LaundryService.selectedService.sukiCardNum" placeholder="Suki Card Number" >
-      </div>
-      <div class="form-group col-md-6">
-        <input class="form-control" name="hasPromo" #hasPromo="ngModel" [(ngModel)]="LaundryService.selectedService.hasPromo" placeholder="Has Promo?" >
-      </div>
-      <div class="form-group col-md-6">
-        <input class="form-control" name="enlistedItems" #enlistedItems="ngModel" [(ngModel)]="LaundryService.selectedService.enlistedItems" placeholder="Enlisted Items" >
-      </div>
-      <div class="form-group col-md-6">
-        <input class="form-control" name="transDate" #transDate="ngModel" [(ngModel)]="LaundryService.selectedService.transDate" placeholder="Transaction Date" >
-      </div>
-      <div class="form-group col-md-6">
-        <input class="form-control" name="totalAmount" #totalAmount="ngModel" [(ngModel)]="LaundryService.selectedService.totalAmount" placeholder="Total Amount" >
-      </div>
-      <div class="form-group col-md-6">
-        <input class="form-control" name="remarks" #remarks="ngModel" [(ngModel)]="LaundryService.selectedService.remarks" placeholder="Remarks" >
+      <div class="input-field col s4">
+          <input name="beginningBal" #beginningBal="ngModel" [(ngModel)]="LaundryService.selectedService.beginningBal" type="text" class="validate">
+          <label for="beginningBal">Beginning Balance</label>
       </div>   
+      <div class="input-field col s4">
+          <input  name="endingBal" #endingBal="ngModel" [(ngModel)]="LaundryService.selectedService.endingBal" type="text" class="validate">
+          <label for="endingBal">Ending Balance</label>
+      </div>
+      <div class="input-field col s4">
+          <input  name="amountUsed" #amountUsed="ngModel" [(ngModel)]="LaundryService.selectedService.amountUsed" type="text" class="validate">
+          <label for="amountUsed">Amount Used</label>
+      </div>
+      <div class="input-field col s4">
+          <input  name="sukiCardNum" #sukiCardNum="ngModel" [(ngModel)]="LaundryService.selectedService.sukiCardNum" type="text" class="validate">
+          <label for="sukiCardNum">Suki Card Number</label>
+      </div>
+      <div class="input-field col s4">
+          <input name="hasPromo" #hasPromo="ngModel" [(ngModel)]="LaundryService.selectedService.hasPromo" type="text" class="validate">
+          <label for="hasPromo">Has Promo?</label>
+      </div>
+      <div class="input-field col s4">
+          <input name="enlistedItems" #enlistedItems="ngModel" [(ngModel)]="LaundryService.selectedService.enlistedItems" type="text" class="validate">
+          <label for="enlistedItems">Enlisted Items</label>
+      </div>
+      <div class="input-field col s4">
+          <input name="transDate" #transDate="ngModel" [(ngModel)]="LaundryService.selectedService.transDate" type="text" class="validate">
+          <label for="transDate">Transaction Date</label>
+      </div>
+      <div class="input-field col s4">
+          <input name="totalAmount" #totalAmount="ngModel" [(ngModel)]="LaundryService.selectedService.totalAmount" type="text" class="validate">
+          <label for="totalAmount">Total Amount</label>
+      </div>
+      <div class="input-field col s12">
+          <textarea id="textarea1" class="materialize-textarea" name="remarks" #remarks="ngModel" [(ngModel)]="LaundryService.selectedService.remarks" ></textarea>
+          <label for="textarea1">Remarks</label>
+        </div>
     </div>
   
     <div class="form-row">

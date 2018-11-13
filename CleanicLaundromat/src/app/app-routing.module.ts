@@ -6,8 +6,10 @@ import { SelfServiceReceiptComponent } from './self-service/self-service-receipt
 import { InventoryComponent } from './inventory/inventory.component';
 import { AddItemComponent } from './inventory/add-item/add-item.component';
 import { GetSelfServiceComponent } from './self-service/get-self-service/get-self-service.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  {path: '', component: HomeComponent},  
   {path: 'self-service', component: SelfServiceComponent},  
   {path: 'drop-off', component: DropOffComponent },
   {path: 'self-service-receipt', component:  SelfServiceReceiptComponent},
