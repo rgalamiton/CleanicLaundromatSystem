@@ -52,3 +52,36 @@ h2 {
     text-align: center;
    /* background:  #0AB9A4; */
 }
+
+
+table {
+    margin: auto;
+    border: 2px solid white; 
+    width: 90%;
+}
+
+.btn4 {
+    display: block;
+    float: left;
+    height: 40px;
+    border-radius: 5px;
+    width: 100px;
+    background-color: #0AB999;
+    margin-left: 35%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+   
+}
+.btn5 {
+    display: block;
+    float: left;
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+    background-color: #0AB999;
+    margin-left: 1%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}

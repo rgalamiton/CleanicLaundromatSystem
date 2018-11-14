@@ -1,24 +1,45 @@
-<table class="highlight">
-    
-  <thead>
-    <tr>
-        <th>Name</th>
-        <th>Contact</th>
-        <th>Card Number</th>
-        <th>Options</th>
-    </tr>
-  </thead>
+<div class="tb1">
+    <ul class="pagination">
+        <li class="disabled"><a href="#!"><i class="large material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="#!">1</a></li>
+        <li class="waves-effect"><a href="#!">2</a></li>
+        <li class="waves-effect"><a href="#!">3</a></li>
+        <li class="waves-effect"><a href="#!">4</a></li>
+        <li class="waves-effect"><a href="#!">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+      </ul>
+  <table class="highlight">
+      
+    <thead>
+      <tr>
+          <th>Name</th>
+          <th>Contact</th>
+          <th>Beginning Bal.</th>
+          <th>Ending Bal.</th>
+          <th>Amount Used</th>
+          <th>Items Total</th>
+          <th>Transaction Date</th>
+          <th>Total Amount</th>
+          <th>Options</th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <tr *ngFor="let selfService of selfServiceList"> 
-        <td>{{selfService.name}}</td>
-        <td>{{selfService.contact}}</td>
-        <td>{{selfService.cardNum}}</td>
-        <td>
-          <a class="btn" (click)="onUpdate( selfService )"><i class="fa fa-pencil-square-o"></i></a>&nbsp;
-          <a class="btn text-danger" (click)="onDelete( selfService.transID )"><i class="fa fa-trash-o"></i></a>
-        </td>
-    </tr>
-  </tbody>
- 
-</table>
+    <tbody>
+      <tr *ngFor="let selfService of selfServiceList"> 
+          <td>{{selfService.name}}</td>
+          <td>{{selfService.contact}}</td>
+          <td>{{selfService.beginningBal}}</td>
+          <td>{{selfService.endingBal}}</td>
+          <td>{{selfService.amountUsed}}</td>
+          <td>{{selfService.itemTotal}}</td>
+          <td>{{selfService.transDate}}</td>
+          <td>{{selfService.totalAmount}}</td>
+          <td>
+            <a class="btn" (click)="onUpdate( selfService )"><i class="fa fa-pencil-square-o"></i></a>&nbsp;
+            <a class="btn text-danger" (click)="onDelete( selfService.transID )"><i class="fa fa-trash-o"></i></a>
+          </td>
+      </tr>
+    </tbody>
+  
+  </table>
+</div>

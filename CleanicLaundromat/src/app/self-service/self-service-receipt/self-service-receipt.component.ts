@@ -17,7 +17,8 @@ export class SelfServiceReceiptComponent implements OnInit {
 
   ngOnInit() {
     this.resetForm();
-    this.id = this._ActivatedRoute.snapshot.params['id'];
+    //this.id = this._ActivatedRoute.snapshot.params['id'];
+    this._ActivatedRoute.params.subscribe(params => { this.id = params['id']; });
   }
 
 
