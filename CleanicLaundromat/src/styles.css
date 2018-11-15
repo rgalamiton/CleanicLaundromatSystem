@@ -57,31 +57,31 @@ h2 {
 table {
     margin: auto;
     border: 2px solid white; 
-    width: 90%;
+    padding-top: 20px;
 }
 
-.btn4 {
+
+
+#btn1 {
     display: block;
     float: left;
     height: 40px;
-    border-radius: 5px;
-    width: 100px;
-    background-color: #0AB999;
+    border-radius: 5px;  
     margin-left: 35%;
     text-align: center;
     line-height: 40px;
     cursor: pointer;
-   
 }
-.btn5 {
+
+#btn2 {
     display: block;
     float: left;
-    border-radius: 5px;
     height: 40px;
-    width: 100px;
-    background-color: #0AB999;
+    border-radius: 5px;
     margin-left: 1%;
     text-align: center;
     line-height: 40px;
     cursor: pointer;
 }
+
+

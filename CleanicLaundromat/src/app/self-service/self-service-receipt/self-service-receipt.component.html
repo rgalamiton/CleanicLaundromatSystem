@@ -1,6 +1,6 @@
 
 <div class="container">
-  <h1>Card {{id}}</h1>
+  <h1>Card #{{id}}</h1>
   <form class="col s12" #sample="ngForm" (ngSubmit)="onSubmit(sample)">
     <!--<input type="hidden" name="id" #id="ngModel" [(ngModel)]="LaundryService.selectedService.id">-->
     <div class="  row">
@@ -55,8 +55,8 @@
     </div>
   
     <div>    
-        <button type="submit" class="btn4"><i class="fa fa-floppy-o"></i> Submit</button>
-        <button type="button" class="btn5" (click)="resetForm(sample)"><i class="fa fa-repeat"></i> Reset</button>  
+        <button type="submit" class="btn btn-success" id="btn1"><i class="fa fa-floppy-o"></i> Submit</button>
+        <button type="button" class="btn btn-success" id="btn2" (click)="resetForm(sample)"><i class="fa fa-repeat"></i> Reset</button>  
     </div>
   </form>  
 
