@@ -27,8 +27,8 @@
 }
 
 .b {
-    margin-left: 590px;
-    padding-bottom: 15px;
+    margin-left: 570px;
+    padding-bottom: 5px;
 }
 
 p {
@@ -58,6 +58,10 @@ table {
     margin: auto;
     border: 2px solid white; 
     padding-top: 20px;
+}
+
+.tb1 {
+    padding-top: 30px;
 }
 
 
