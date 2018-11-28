@@ -1,0 +1,102 @@
+<app-home></app-home>
+
+<div class="container">
+  <h1>Card #{{id}}</h1>
+  <form class="col s12" #sample="ngForm" (ngSubmit)="onSubmit(sample)">
+      <!--<input type="hidden" name="id" #id="ngModel" [(ngModel)]="LaundryService.selectedService.id">-->
+      <div class="  row">
+          <div class="input-field col s4">
+              <input name="name" #name="ngModel" [(ngModel)]="selectedService.name" type="text" class="validate">
+              <label for="name">Name</label>
+          </div>
+          <div class="input-field col s4">
+              <input name="contact" #contact="ngModel" [(ngModel)]="selectedService.contact" type="text" class="validate">
+              <label for="contact">Contact</label>
+          </div>
+          <div class="input-field col s4">
+              <label for="beginningBal">Beginning Balance</label>
+              <input  readonly name="beginningBal" #beginningBal="ngModel" [(ngModel)]="selectedService.beginningBal"
+                  type="text" class="validate">
+          </div>
+          <div class="input-field col s4">
+              <input disabled name="cardNum" #cardNum="ngModel" [(ngModel)]="selectedService.cardNum" type="hidden"
+                  class="validate">
+          </div>
+          <div class="input-field col s4">
+              <input name="hasPromo" #hasPromo="ngModel" [(ngModel)]="selectedService.hasPromo" type="text" class="validate">
+              <label for="hasPromo">Has Promo?</label>
+          </div>
+          <div class="input-field col s4">
+              <input name="endingBal" #endingBal="ngModel" [(ngModel)]="selectedService.endingBal" type="text" class="validate">
+              <label for="endingBal">Ending Balance</label>
+          </div>
+          <div class="input-field col s4">
+              <input name="sukiCardNum" #sukiCardNum="ngModel" [(ngModel)]="selectedService.sukiCardNum" type="text"
+                  class="validate">
+              <label for="sukiCardNum">Suki Card Number</label>
+          </div>
+          <div class="input-field col s4">
+              <input name="enlistedItems" #enlistedItems="ngModel" [(ngModel)]="selectedService.enlistedItems" type="text"
+                  class="validate">
+              <label for="enlistedItems">Enlisted Items</label>
+          </div>
+          <div class="input-field col s4">
+              <input name="amountUsed" #amountUsed="ngModel" [(ngModel)]="selectedService.amountUsed" type="text"
+                  class="validate">
+              <label for="amountUsed">Amount Used</label>
+          </div>
+          <div class="input-field col s4">
+              <input name="transDate" #transDate="ngModel" [(ngModel)]="selectedService.transDate" type="text" class="validate">
+              <label for="transDate">Transaction Date</label>
+          </div>
+
+          <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea" name="remarks" #remarks="ngModel" [(ngModel)]="selectedService.remarks"></textarea>
+              <label for="textarea1">Remarks</label>
+          </div>
+          <div class="tb1">
+              <table id="example" class="highlight table-striped table-bordered">
+                  <thead>
+                      <tr>
+                          <th>Item Name</th>
+                          <th>Price</th>
+                          <th>Quantity</th>
+                          <th>Amount</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr *ngFor="let inventoryService of getInventoryList">
+                          <td>{{inventoryService.itemName}}</td>
+                          <td>{{inventoryService.sellingPrice}}</td>
+                          <td>
+                              <button type="button" class="btn btn-default" (click)="decrease_quantity(inventoryService)">
+                                  <span class="glyphicon glyphicon-minus"></span>
+                              </button>&nbsp;&nbsp;
+                              <input readonly style="width:100px;" type="number" [(ngModel)]="inventoryService.markUp"
+                                  [ngModelOptions]="{standalone: true}">&nbsp;&nbsp;
+                              <button type="button" class="btn btn-default" (click)="increase_quantity(inventoryService)">
+                                  <span class="glyphicon glyphicon-plus"></span>
+                              </button>
+                          </td>
+                          <td><input readonly style="width:100px;" type="number" [(ngModel)]="inventoryService.profit"
+                                  [ngModelOptions]="{standalone: true}" (change)="countPrice(inventoryService)"></td>
+                          <!--<td>{{Price}}</td>-->
+                      </tr>
+                  </tbody>
+              </table>
+              <h5> Total Item Amount: {{itemTotal}}</h5>
+             <!-- <h6>Total Amount:</h6><input readonly id="totalA" name="totalAmount" #totalAmount="ngModel" [(ngModel)]="selectedService.totalAmount"
+                  type="text" class="validate">-->
+
+
+          </div>
+
+      </div>
+      <div>
+          <button type="submit" class="btn btn-success" id="btn1"><i class="fa fa-floppy-o"></i> Submit</button>
+          <button type="button" class="btn btn-success" id="btn2" (click)="resetForm(sample)"><i class="fa fa-repeat"></i>
+              Reset</button>
+      </div>
+  </form>
+
+</div>

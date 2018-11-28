@@ -20,8 +20,8 @@ export class GetSelfServiceComponent implements OnInit {
     if(confirm('Are you sure you want to delete this record?') == true){
       this.LaundryService.deleteService(id)
         .subscribe( x => {
-          this.toastr.warning('Successfully deleted the record!', 'Record Deleted');
           this.LaundryService.getSelfService();   
+          this.toastr.warning('Successfully deleted the record!', 'Record Deleted');   
         }
       )
     }

@@ -1,43 +1,44 @@
+<app-home></app-home>
 
 <div class="container">
   <form class="col s12" #inventory="ngForm" (ngSubmit)="onSubmit(inventory)">
     <div class="row">
       <div class="input-field col s6">
-          <input id="itemName" type="text" class="validate" name="itemName" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.itemName">
+          <input name="itemName" #itemName="ngModel" [(ngModel)]="selectedInventory.itemName" type="text" class="validate">
           <label for="itemName">Item name</label>
       </div>
       <div class="input-field col s6">
-          <input id="category" type="text" class="validate" name="category" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.category">
+          <input type="text" class="validate" name="category" #category="ngModel" [(ngModel)]="selectedInventory.category">
           <label for="category">Category</label>
       </div>
       <div class="input-field col s4">
-          <input id="sellingPrice" type="text" class="validate" name="sellingPrice" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.sellingPrice">
+          <input type="text" class="validate" name="sellingPrice" #sellingPrice="ngModel" [(ngModel)]="selectedInventory.sellingPrice">
           <label for="sellingPrice">Selling Price</label>
       </div>
       <div class="input-field col s4">
-          <input id="price" type="text" class="validate" name="price" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.price">
+          <input type="text" class="validate" name="price" #price="ngModel" [(ngModel)]="selectedInventory.price">
           <label for="price">Price</label>
       </div>
       <div class="input-field col s4">
-          <input id="profit" type="text" class="validate" name="profit" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.profit">
+          <input type="text" class="validate" name="profit" #profit="ngModel" [(ngModel)]="selectedInventory.profit">
           <label for="profit">Profit</label>
       </div> 
         <br>
         <div class="input-field col s2">
-          <input id="sourceStore" type="text" class="validate" name="sourceStore" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.sourceStore">
+          <input type="text" class="validate" name="sourceStore" #sourceStore="ngModel" [(ngModel)]="selectedInventory.sourceStore">
           <label for="sourceStore">Source Store</label>
         </div>
         <div class="input-field col s2">
-          <input id="quantity" type="text" class="validate" name="quantity" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.quantity">
+          <input type="text" class="validate" name="quantity" #quantity="ngModel" [(ngModel)]="selectedInventory.quantity">
           <label for="quantity">Quantity</label>
         </div>     
         <div class="input-field col s2">
-          <input id="markUp" type="text" class="validate" name="markUp" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.markUp">
+          <input type="text" class="validate" name="markUp" #markUp="ngModel" [(ngModel)]="selectedInventory.markUp">
           <label for="markUp">Markup</label>
         </div>
 
         <div class="input-field col s12">
-          <input id="inventoryType" type="text" class="validate" name="inventoryType" #title="ngModel" [(ngModel)]="DetailsService.selectedBboard.inventoryType">
+          <input type="text" class="validate" name="inventoryType" #inventoryType="ngModel" [(ngModel)]="selectedInventory.inventoryType">
           <label for="inventoryType">Inventory type</label>
         </div>
         

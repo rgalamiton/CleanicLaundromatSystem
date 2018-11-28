@@ -1,3 +1,5 @@
+<app-home></app-home>
+
 <div class="container">
   <div class="ssb">
     <div style="text-align: center">
@@ -7,9 +9,11 @@
     </div>
     
     <div class="b">
+     
       <a class="btn btn-success" href="/getSelfService"> SHOW DATA </a>&nbsp;
-      <button class="btn btn-success" routerLink="" routerLinkActive #rla="routerLinkActive"> MAIN </button><br>
+      <button class="btn btn-success" routerLink="/homebuttons" routerLinkActive #rla="routerLinkActive"> MAIN </button><br>
     </div>
+    <a class="btn btn-success" href="/tableFilter"> PrimeNG TABLE </a>&nbsp;
 
     <div style="text-align:center">
       <button class="button medium-btn" routerLink="/self-service-receipt/1" routerLinkActive="active"><p> 1 </p> </button>
@@ -22,5 +26,6 @@
       <button class="button medium-btn" routerLink="/self-service-receipt/8" routerLinkActive="active"><p> 8 </p></button>
       <button class="button medium-btn" routerLink="/self-service-receipt/9" routerLinkActive="active"><p> 9 </p></button><br>
     </div>
+    
   </div>
 </div>

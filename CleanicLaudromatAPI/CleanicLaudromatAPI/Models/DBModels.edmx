@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="itemID" />
           </Key>
-          <Property Name="itemID" Type="int" Nullable="false" />
+          <Property Name="itemID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="itemName" Type="varchar" MaxLength="50" />
           <Property Name="category" Type="varchar" MaxLength="50" />
           <Property Name="sellingPrice" Type="int" />
@@ -44,7 +44,7 @@
           <Key>
             <PropertyRef Name="transID" />
           </Key>
-          <Property Name="transID" Type="int" Nullable="false" />
+          <Property Name="transID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="varchar" MaxLength="50" />
           <Property Name="contact" Type="varchar" MaxLength="50" />
           <Property Name="controlNum" Type="int" />
@@ -53,7 +53,7 @@
           <Key>
             <PropertyRef Name="userID" />
           </Key>
-          <Property Name="userID" Type="int" Nullable="false" />
+          <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="userName" Type="varchar" MaxLength="50" />
           <Property Name="userPassword" Type="varchar" MaxLength="50" />
         </EntityType>
@@ -72,7 +72,7 @@
           <Key>
             <PropertyRef Name="itemID" />
           </Key>
-          <Property Name="itemID" Type="Int32" Nullable="false" />
+          <Property Name="itemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="itemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="category" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="sellingPrice" Type="Int32" />
@@ -107,7 +107,7 @@
           <Key>
             <PropertyRef Name="transID" />
           </Key>
-          <Property Name="transID" Type="Int32" Nullable="false" />
+          <Property Name="transID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="contact" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="controlNum" Type="Int32" />
@@ -116,7 +116,7 @@
           <Key>
             <PropertyRef Name="userID" />
           </Key>
-          <Property Name="userID" Type="Int32" Nullable="false" />
+          <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="userName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="userPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>

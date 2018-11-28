@@ -12,7 +12,7 @@ namespace CleanicLaudromatAPI
         {
             // Web API configuration and services
 
-            config.EnableCors(new EnableCorsAttribute("http://localhost:4200", headers: "*", methods: "*"));
+            //config.EnableCors(new EnableCorsAttribute("http://localhost:4200", headers: "*", methods: "*"));
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -22,6 +22,8 @@ namespace CleanicLaudromatAPI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Filters.Add(new AuthorizeAttribute());
         }
     }
 }

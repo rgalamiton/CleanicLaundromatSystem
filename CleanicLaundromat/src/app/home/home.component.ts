@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from '../user/user.service';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  userClaims: any;
 
-  constructor() { }
+  constructor(private router : Router, private userService : UserService) { }
 
   ngOnInit() {
+    this.userService.getUserClaims().subscribe((data: any) => {
+      this.userClaims = data;
+    });
   }
-
+  
+  Logout() {
+    localStorage.removeItem('userToken');
+    this.router.navigate(['/login']);
+  }
 }

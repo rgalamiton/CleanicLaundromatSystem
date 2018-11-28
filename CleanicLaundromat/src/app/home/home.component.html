@@ -1,7 +1,24 @@
-<div class="btn3" style="text-align:center">
+<div style="text-align:center">
  
-  <button class="button btn2" routerLink="/self-service" routerLinkActive #rla="routerLinkActive"><font size="5">SELF-SERVICE</font></button><br>
-  <button class="button btn2" routerLink="/drop-off" routerLinkActive #rla="routerLinkActive"><font size="5">DROP-OFF</font></button>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+      
+        <ul class="left hide-on-med-and-down">
+            <a routerLink ="/homebuttons" class="brand-logo">Cleanic Laundromat System</a>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li><a *ngIf="userClaims"><strong>Welcome {{userClaims.FirstName}} {{userClaims.LastName}}!</strong></a></li>
+          <li><a href="/inventory" routerLinkActivate="Active">Reports</a></li>
+          <li><a href="/inventory" routerLinkActivate="Active">Inventory</a></li>
+          <li><a (click)="Logout()">Logout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 </div>
 
 <router-outlet></router-outlet>
+
+
+

@@ -12,4 +12,5 @@ export class Details {
      transDate : string;
      totalAmount : number;
      remarks : string;
+     itemTotal : number;
 }

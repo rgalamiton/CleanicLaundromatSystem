@@ -31,6 +31,13 @@
     padding-bottom: 5px;
 }
 
+.btnAddItem {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-right: 12px;
+}
+
+
 p {
     font-family: "Times New Roman", Times, serif;
     font-size: 40px;
@@ -53,7 +60,6 @@ h2 {
    /* background:  #0AB9A4; */
 }
 
-
 table {
     margin: auto;
     border: 2px solid white; 
@@ -64,7 +70,19 @@ table {
     padding-top: 30px;
 }
 
+#tab1{
+    background-color: #0EC3D9;
+}
 
+#totalA {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 42px;
+}
+
+#example {
+    width: 100%;  
+}
 
 #btn1 {
     display: block;

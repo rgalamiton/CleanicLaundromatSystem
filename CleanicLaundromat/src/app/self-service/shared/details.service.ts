@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Details } from '../shared/details.model';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
-import { Http, Headers, RequestOptions, RequestMethod } from '@angular/http';
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { Inventory } from './inventory.model';
 
 
 const httpOptions = {
@@ -18,7 +17,10 @@ const httpOptions = {
 })
 export class DetailsService {
   selectedService: Details;
+
   private _url = "http://localhost:54907/api/Self_service";
+  private _url2 = "http://localhost:54907/api/InventoryLists";
+  
   
   constructor(private http: HttpClient) { }
   
@@ -26,14 +28,28 @@ export class DetailsService {
     return this.http.post<Details>(this._url, data, httpOptions);
   }
 
+  postInventory(data: Inventory): Observable<Inventory> {
+    return this.http.post<Inventory>(this._url2, data, httpOptions);
+  }
+
   getSelfService(): Observable<Details[]>{
     return this.http.get<Details[]>(this._url);
+  }
+
+  getInventory(): Observable<Inventory[]>{
+    return this.http.get<Inventory[]>(this._url2);
   }
 
   deleteService(id: number): Observable<{}>{
     const url = this._url + '/' + id;
     return this.http.delete(url, httpOptions);
   }
+
+  deleteInventory(id: number): Observable<{}>{
+    const url = this._url2 + '/' + id;
+    return this.http.delete(url, httpOptions);
+  }
+
 
  /* updateService(data: Details): Observable<Details> {
     const url = this._url + '/' + id;
