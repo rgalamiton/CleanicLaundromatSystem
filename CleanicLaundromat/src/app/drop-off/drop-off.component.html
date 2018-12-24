@@ -1,9 +1,74 @@
 <app-home></app-home>
 
-<div style="text-align:left">
-  <h1>
-    DROP-OFF
-  </h1>
+<div class="container">
+    <form class="col s12" #sample="ngForm" (ngSubmit)="onSubmit(sample)">
+        <!--<input type="hidden" name="id" #id="ngModel" [(ngModel)]="LaundryService.selectedService.id">-->
+        <div class="  row">
+            <div class="input-field col s4">
+                <input name="controlNum" #controlNum="ngModel" [(ngModel)]="dropoff.controlNum" type="text" class="validate">
+                <label for="controlNum">Control #</label>
+            </div>
+            <div class="input-field col s4">
+                <input name="Name" #Name="ngModel" [(ngModel)]="dropoff.name" type="text" class="validate">
+                <label for="Name">Name</label>
+            </div>
+            <div class="input-field col s4">
+              <input name="contact" #contact="ngModel" [(ngModel)]="dropoff.contact" type="text" class="validate">
+              <label for="contact">Contact #</label>
+            </div>
+            
+            WASH
+            <table>
+              <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                    <th>Amount</th>
+                </tr>
+              </thead>
+      
+              <tbody>          
+                <tr>
+                  <td> 
+                      <div class="form-group col s8">
+                          <select id="washcategory" name="washcategory" class="form-control">              
+                            <option value="" disabled>Select Category</option>
+                            <option value="Regular">Regular</option>
+                            <option value="Titan">Titan</option>
+                          </select>
+                       </div>
+                  </td>
+                  <td   >
+                      <button type="button" class="btn btn-default" (click)="decrease_quantity(package)">
+                          <span class="glyphicon glyphicon-minus"></span>
+                      </button>&nbsp;&nbsp;
+                      <input readonly style="width:100px;" type="number" [(ngModel)]="package.quantity"
+                          [ngModelOptions]="{standalone: true}">&nbsp;&nbsp;
+                      <button type="button" class="btn btn-default" (click)="increase_quantity(package)">
+                          <span class="glyphicon glyphicon-plus"></span>
+                      </button>
+                  </td>
+                  <td>$3.76</td>
+                </tr>
+               
+              </tbody>
+            </table>
+           
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success" id="btn1"><i class="fa fa-floppy-o"></i> Submit</button>
+            <button type="button" class="btn btn-success" id="btn2" (click)="resetForm(sample)"><i class="fa fa-repeat"></i>
+                Reset</button>
+        </div>
+    </form>
+
+   
+
 </div>
 
+<br>
+<br>
 
+<p>
+    UNDER CONSTRUCTION...
+  </p>

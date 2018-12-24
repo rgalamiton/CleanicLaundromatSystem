@@ -17,15 +17,19 @@ const httpOptions = {
 })
 export class DetailsService {
   selectedService: Details;
+  getInventoryList : Inventory;
+  
+  
+  arrayInventory = [this.getInventoryList];
 
-  private _url = "http://localhost:54907/api/Self_service";
+  private _url1 = "http://localhost:54907/api/Self_service";
   private _url2 = "http://localhost:54907/api/InventoryLists";
   
   
   constructor(private http: HttpClient) { }
   
   postService(data: Details): Observable<Details> {
-    return this.http.post<Details>(this._url, data, httpOptions);
+    return this.http.post<Details>(this._url1, data, httpOptions);
   }
 
   postInventory(data: Inventory): Observable<Inventory> {
@@ -33,7 +37,7 @@ export class DetailsService {
   }
 
   getSelfService(): Observable<Details[]>{
-    return this.http.get<Details[]>(this._url);
+    return this.http.get<Details[]>(this._url1);
   }
 
   getInventory(): Observable<Inventory[]>{
@@ -41,7 +45,7 @@ export class DetailsService {
   }
 
   deleteService(id: number): Observable<{}>{
-    const url = this._url + '/' + id;
+    const url = this._url1 + '/' + id;
     return this.http.delete(url, httpOptions);
   }
 
@@ -50,12 +54,9 @@ export class DetailsService {
     return this.http.delete(url, httpOptions);
   }
 
-
- /* updateService(data: Details): Observable<Details> {
-    const url = this._url + '/' + id;
-    return this.http.put<Details>(this._url, data, httpOptions);
+  updateInventory(id: number, data: Inventory): Observable<Inventory> {
+    const url = this._url2 + '/' + id;
+    return this.http.put<Inventory>(url, data, httpOptions);
   }
-
-  */
 
 }

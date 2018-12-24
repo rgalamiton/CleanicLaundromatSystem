@@ -9,7 +9,7 @@
         </ul>
         <ul class="right hide-on-med-and-down">
           <li><a *ngIf="userClaims"><strong>Welcome {{userClaims.FirstName}} {{userClaims.LastName}}!</strong></a></li>
-          <li><a href="/inventory" routerLinkActivate="Active">Reports</a></li>
+          <li><a href="/report" routerLinkActivate="Active">Reports</a></li>
           <li><a href="/inventory" routerLinkActivate="Active">Inventory</a></li>
           <li><a (click)="Logout()">Logout</a></li>
         </ul>

@@ -20,11 +20,16 @@ export class GetSelfServiceComponent implements OnInit {
     if(confirm('Are you sure you want to delete this record?') == true){
       this.LaundryService.deleteService(id)
         .subscribe( x => {
-          this.LaundryService.getSelfService();   
+          this.fetchData();
           this.toastr.warning('Successfully deleted the record!', 'Record Deleted');   
         }
       )
     }
+  }
+
+  fetchData(){
+    this.LaundryService.getSelfService()
+    .subscribe(data => this.selfServiceList = data);
   }
 
  /* onUpdate(data: Object){

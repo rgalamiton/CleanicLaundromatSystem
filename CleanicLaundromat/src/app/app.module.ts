@@ -1,10 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClientModule, HTTP_INTERCEPTORS}  from '@angular/common/http';
 import { AccordionModule } from 'primeng/accordion';
-import { MenuItem } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {TableModule} from 'primeng/table';
 
@@ -25,8 +24,6 @@ import { HomebuttonsComponent } from './home/homebuttons/homebuttons.component';
 import { DetailsService } from './self-service/shared/details.service';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,6 +45,7 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AccordionModule,
     BrowserAnimationsModule,

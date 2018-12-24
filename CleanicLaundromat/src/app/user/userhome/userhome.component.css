@@ -1,0 +1,30 @@
+h1 { 
+    color: #0EC3D9;
+    font-family: 'Rouge Script', cursive; 
+    font-size: 60px; 
+    font-weight: normal; 
+    line-height: 48px; 
+    margin: 0 0 50px; 
+    text-align: center; 
+    text-shadow: 1px 1px 2px #082b34;
+    padding-top: 25px;
+}
+
+h2 { 
+    color: #a7e8f8; 
+    font-family: 'Julius Sans One', sans-serif; 
+    font-size: 45px; 
+    font-weight: bold; 
+    line-height: 32px; 
+    margin: 0 0 24px; 
+    text-shadow: 1px 1px 1px #082b34; 
+}
+
+
+p { color: #FFFFFF; font-family: 'Carme', sans-serif; font-size: 16px; line-height: 24px; margin: 0 0 24px; }
+
+
+a { color: #CEF0D4; text-decoration: underline; }
+
+
+a:hover { color: #a7e8f8; text-decoration: underline; }

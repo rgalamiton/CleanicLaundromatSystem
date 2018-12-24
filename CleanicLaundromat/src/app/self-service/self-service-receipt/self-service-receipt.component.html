@@ -14,9 +14,9 @@
                 <label for="contact">Contact</label>
             </div>
             <div class="input-field col s4">
-                <label for="beginningBal">Beginning Balance</label>
+                <label id="bb" for="beginningBal">Beginning Balance</label>
                 <input  readonly name="beginningBal" #beginningBal="ngModel" [(ngModel)]="selectedService.beginningBal"
-                    type="text" class="validate">
+                    type="text" class="validate" autofocus>
             </div>
             <div class="input-field col s4">
                 <input disabled name="cardNum" #cardNum="ngModel" [(ngModel)]="selectedService.cardNum" type="hidden"
@@ -54,7 +54,8 @@
                 <textarea id="textarea1" class="materialize-textarea" name="remarks" #remarks="ngModel" [(ngModel)]="selectedService.remarks"></textarea>
                 <label for="textarea1">Remarks</label>
             </div>
-            <div class="tb1">
+            
+             <div class="tb1">
                 <table id="example" class="highlight table-striped table-bordered">
                     <thead>
                         <tr>
@@ -80,17 +81,16 @@
                             </td>
                             <td><input readonly style="width:100px;" type="number" [(ngModel)]="inventoryService.profit"
                                     [ngModelOptions]="{standalone: true}" (change)="countPrice(inventoryService)"></td>
-                            <!--<td>{{Price}}</td>-->
                         </tr>
                     </tbody>
                 </table>
                 <h5> Total Item Amount: {{itemTotal}}</h5>
-               <!-- <h6>Total Amount:</h6><input readonly id="totalA" name="totalAmount" #totalAmount="ngModel" [(ngModel)]="selectedService.totalAmount"
-                    type="text" class="validate">-->
+              <h6>Total Amount:</h6><input readonly id="totalA" name="totalAmount" #totalAmount="ngModel" [(ngModel)]="selectedService.totalAmount"
+                    type="text" class="validate">
 
 
             </div>
-
+            
         </div>
         <div>
             <button type="submit" class="btn btn-success" id="btn1"><i class="fa fa-floppy-o"></i> Submit</button>
@@ -99,9 +99,9 @@
         </div>
     </form>
 
+   
+
 </div>
-
-
 
 <br>
 <br>

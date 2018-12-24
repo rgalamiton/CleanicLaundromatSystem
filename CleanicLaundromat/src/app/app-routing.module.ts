@@ -23,12 +23,13 @@ const routes: Routes = [
   { path: 'drop-off', component: DropOffComponent, canActivate: [AuthGuard] },
   { path: 'self-service-receipt/:id', component: SelfServiceReceiptComponent, canActivate: [AuthGuard] },
   { path: 'inventory', component: InventoryComponent, canActivate: [AuthGuard] },
-  { path: 'add-item', component: AddItemComponent, canActivate: [AuthGuard] },
+  { path: 'create', component: AddItemComponent, canActivate: [AuthGuard] },
   { path: 'getSelfService', component: GetSelfServiceComponent, canActivate: [AuthGuard] },
   { path: 'tableFilter', component: TablefilterComponent, canActivate: [AuthGuard] },
   { path: 'updateSelfService/:id', component: UpdateServiceComponent, canActivate: [AuthGuard] },
   { path: 'updateInventory', component: UpdateInventoryComponent, canActivate: [AuthGuard] },
   { path: 'userHome', component: UserhomeComponent, canActivate: [AuthGuard] },
+
   {
     path: 'signup', component: UserhomeComponent,
     children: [{ path: '', component: SignUpComponent }]

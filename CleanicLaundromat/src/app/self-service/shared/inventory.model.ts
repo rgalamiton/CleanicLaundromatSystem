@@ -1,5 +1,5 @@
 export class Inventory {
-    id: number;
+    itemID: number;
     itemName: string;
     category: string;
     sellingPrice: number;
@@ -9,5 +9,5 @@ export class Inventory {
     markUp: number;
     inventoryType: string;
     quantity: number;
-    
+    isUpdate: boolean = false;
 }
